@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "expo-scaffold-tmp",
-    "slug": "expo-scaffold-tmp",
+    "name": "Expense Tracker",
+    "slug": "expense-tracker-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "exposcaffoldtmp",
+    "scheme": "expensetracker",
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon"
@@ -17,7 +17,11 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.skywalker123.expensetrackerapp"
     },
     "web": {
       "output": "static",
@@ -28,15 +32,29 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#208AEF",
+          "backgroundColor": "#2F6FED",
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
+        }
+      ],
+      "expo-sqlite",
+      "@react-native-community/datetimepicker",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Expense Tracker to access your photos to attach expense receipts."
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "4d01faba-a946-40da-b661-1d3e5362ffbc"
+      }
     }
   }
 }
