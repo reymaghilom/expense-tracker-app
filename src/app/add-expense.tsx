@@ -204,8 +204,11 @@ export default function AddExpenseScreen() {
 
       <KeyboardAvoidingView
         style={styles.flex}
-        behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
-        <ScrollView contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled">
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
+        <ScrollView
+          contentContainerStyle={styles.content}
+          keyboardShouldPersistTaps="handled"
+          keyboardDismissMode={Platform.OS === 'ios' ? 'interactive' : 'on-drag'}>
           <TransactionTypeToggle value={type} onChange={setType} />
 
           <AmountInput
@@ -241,13 +244,16 @@ export default function AddExpenseScreen() {
             <View style={styles.noteRow}>
               <Text style={[styles.noteLabel, { color: colors.textSecondary }]}>{t.addTransaction.noteOptional}</Text>
               <View style={styles.noteInputRow}>
-                <Ionicons name="document-text-outline" size={18} color={colors.text} />
+                <Ionicons name="document-text-outline" size={18} color={colors.text} style={styles.noteIcon} />
                 <TextInput
                   value={note}
                   onChangeText={setNote}
                   placeholder={t.addTransaction.notePlaceholder}
                   placeholderTextColor={colors.textMuted}
                   style={[styles.noteInput, { color: colors.text }]}
+                  multiline
+                  textAlignVertical="top"
+                  blurOnSubmit={false}
                 />
               </View>
             </View>
@@ -332,6 +338,7 @@ const styles = StyleSheet.create({
   },
   content: {
     padding: Spacing.lg,
+    paddingBottom: Spacing.xxxl * 2,
     gap: Spacing.lg,
   },
   formCard: {
@@ -351,12 +358,18 @@ const styles = StyleSheet.create({
   },
   noteInputRow: {
     flexDirection: 'row',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     gap: Spacing.sm,
+  },
+  noteIcon: {
+    marginTop: 2,
   },
   noteInput: {
     fontSize: FontSize.base,
     flex: 1,
+    minHeight: 22,
+    maxHeight: 120,
+    paddingTop: 0,
   },
   receiptRow: {
     paddingVertical: Spacing.md,

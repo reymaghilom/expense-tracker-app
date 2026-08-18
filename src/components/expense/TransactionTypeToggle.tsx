@@ -21,18 +21,18 @@ export function TransactionTypeToggle({ value, onChange, disabled }: Transaction
     <View style={styles.row}>
       <View style={styles.item}>
         <FilterChip
-          label={t.common.expense}
-          active={value === 'expense'}
-          activeColor={colors.expense}
-          onPress={() => !disabled && onChange('expense')}
-        />
-      </View>
-      <View style={styles.item}>
-        <FilterChip
           label={t.common.income}
           active={value === 'income'}
           activeColor={colors.income}
           onPress={() => !disabled && onChange('income')}
+        />
+      </View>
+      <View style={styles.item}>
+        <FilterChip
+          label={t.common.expense}
+          active={value === 'expense'}
+          activeColor={colors.expense}
+          onPress={() => !disabled && onChange('expense')}
         />
       </View>
     </View>

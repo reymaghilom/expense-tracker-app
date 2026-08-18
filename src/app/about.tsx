@@ -1,6 +1,6 @@
 import Constants from 'expo-constants';
 import { router } from 'expo-router';
-import { StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { ScreenHeader } from '@/components/ui/ScreenHeader';
@@ -20,8 +20,12 @@ export default function AboutScreen() {
       <ScreenHeader title={t.legal.aboutTitle} onBack={() => router.back()} centered />
 
       <View style={styles.content}>
-        <View style={[styles.badge, { backgroundColor: colors.primary }]}>
-          <Text style={styles.badgeText}>₱</Text>
+        <View style={[styles.logoBadge, Shadow.card, { backgroundColor: colors.surface }]}>
+          <Image
+            source={require('@/assets/expense-tracker-icon.png')}
+            style={styles.logoImage}
+            resizeMode="contain"
+          />
         </View>
 
         <Text style={[styles.appName, { color: colors.text }]}>{t.dashboard.appTitle}</Text>
@@ -53,18 +57,18 @@ const styles = StyleSheet.create({
     paddingTop: Spacing.xl,
     gap: Spacing.sm,
   },
-  badge: {
-    width: 64,
-    height: 64,
+  logoBadge: {
+    width: 88,
+    height: 88,
     borderRadius: Radius.xl,
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: Spacing.sm,
+    padding: Spacing.sm,
   },
-  badgeText: {
-    fontSize: FontSize.xxl,
-    fontWeight: '800',
-    color: '#FFFFFF',
+  logoImage: {
+    width: '100%',
+    height: '100%',
   },
   appName: {
     fontSize: FontSize.lg,
