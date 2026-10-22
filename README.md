@@ -19,6 +19,8 @@ It was built for everyday users in the Philippines: amounts are formatted in pes
 - **CSV export:** share a spreadsheet-ready report of all transactions through the device's share sheet.
 - **Personalization:** light, dark, or system theme; English or Cebuano/Bisaya; and a choice of date formats.
 
+
+
 ## Technology Stack
 
 | Category | Technologies |
