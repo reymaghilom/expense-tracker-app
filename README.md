@@ -19,7 +19,47 @@ It was built for everyday users in the Philippines: amounts are formatted in pes
 - **CSV export:** share a spreadsheet-ready report of all transactions through the device's share sheet.
 - **Personalization:** light, dark, or system theme; English or Cebuano/Bisaya; and a choice of date formats.
 
+## Application Screenshots
 
+### Featured Screens
+
+<p align="center">
+  <img src="screenshots/8.jpg" width="185" alt="Dashboard">
+  <img src="screenshots/6.jpg" width="185" alt="Transactions">
+  <img src="screenshots/11.jpg" width="185" alt="Add Expense">
+</p>
+
+<p align="center">
+  <sub>Dashboard · Transactions · Add Expense</sub>
+</p>
+
+<p align="center">
+  <img src="screenshots/10.jpg" width="185" alt="Add Income">
+  <img src="screenshots/2.jpg" width="185" alt="Analytics">
+  <img src="screenshots/9.jpg" width="185" alt="Settings">
+</p>
+
+<p align="center">
+  <sub>Add Income · Analytics · Settings</sub>
+</p>
+
+### Additional Screens
+
+<details>
+<summary><strong>View 5 More Screenshots</strong></summary>
+
+<p align="center">
+  <img src="screenshots/3.jpg" width="185" alt="Financial Overview">
+  <img src="screenshots/4.jpg" width="185" alt="Financial Statistics">
+  <img src="screenshots/5.jpg" width="185" alt="Monthly Overview">
+</p>
+
+<p align="center">
+  <img src="screenshots/7.jpg" width="185" alt="Transaction Overview">
+  <img src="screenshots/1.jpg" width="185" alt="About Application">
+</p>
+
+</details>
 
 ## Technology Stack
 
